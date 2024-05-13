@@ -1,7 +1,7 @@
 @layer reset, base, components, utilities, overrides;
 
-@import url("/css/reset.css") layer(reset);
+@import url("reset.css") layer(reset);
 /* @import url("/css/base.css") layer(base); */
-@import url("/css/components/index.css") layer(components);
+@import url("components/index.css") layer(components);
 /* @import url("/css/utilities/index.css") layer(utilities); */
 /* @import url("/css/overrides.css") layer(overrides); */
