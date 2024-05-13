@@ -11,7 +11,10 @@
 <body>
     <header class="space-between">
         <h1>Oliver noodles</h1>
-        <button class="button" id="registerLogin" href="register.php">Register</button>
+        <div>
+            <button class="button" href="register.php">Register</button>
+            <button class="button" href="login.php">Login</button>
+        </div>
     </header>
 
     <div id="menu">
