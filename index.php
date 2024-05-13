@@ -11,6 +11,7 @@
 <body>
     <header class="space-between">
         <h1>Oliver noodles</h1>
+        <img src="../../img/logo.png" alt="ll">
         <div>
             <button class="button" href="register.php">Register</button>
             <button class="button" href="login.php">Login</button>
