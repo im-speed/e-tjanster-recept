@@ -6,7 +6,6 @@
     -   [ ] Funktioner för att kontakta databasen
     -   [ ] PHP-klasser för tabellerna
 -   [ ] Startsida där man kan se de olika receptkategorierna
--   [ ] Inloggning- och registreringsfunktion
 -   [ ] Funktion för att posta recept
     -   [ ] Funktioner för att kunna söka/filtrera recept
     -   [ ] Integrera Livsmedelsverkets API så att man väljer ingridienser därifrån
@@ -14,8 +13,10 @@
     -   [ ] Skapa sådana sidor från TheMealDB API:n
 -   [ ] Funktioner för moderation
 
-### Görs (av)
+### Görs
 
--   [ ] Sidhuvud och meny (flera)
+-   [ ] Sidhuvud och meny
+-   [ ] Inloggning- och registreringsfunktion
+-   [ ] Designa databas
 
 ### Gjort

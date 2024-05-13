@@ -1,21 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="CSS/button.css">
-    <link rel="stylesheet" href="CSS/headerMain.css">
+    <link rel="stylesheet" href="/CSS/index.css">
     <title>Document</title>
 </head>
-<header><h1>Oliver noodles</h1></header>
-<body>
-    <div class="button">
 
-    <button>Meny</button>
+<body>
+    <header class="space-between">
+        <h1>Oliver noodles</h1>
+        <button class="button" id="registerLogin" href="register.php">Register</button>
+    </header>
+
+    <div id="menu">
+
+        <button class="button">Start</button>
+        <a class="button" href="/ioajsdioafjfia">Recept</a>
+        <button class="button">Meny</button>
 
     </div>
     <div>
 
     </div>
 </body>
+
 </html>
