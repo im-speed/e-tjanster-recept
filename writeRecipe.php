@@ -9,11 +9,11 @@
 </head>
 
 <body>
-    <script type="module" src="js/components/ingredientsSearch.js"></script>
+    <script type="module" src="js/writeRecipe/index.js"></script>
 
-    <div class="dropdown ingredients-list">
-        <input class="ingredients-search" type="search">
-        <div class="dropdown-list ingredients-filtered"></div>
+    <div class="ingredients">
+        <div id="ingredients-list" class="ingredients-list"></div>
+        <button id="add-ingredient" class="button">+ Add ingredient</button>
     </div>
 </body>
 

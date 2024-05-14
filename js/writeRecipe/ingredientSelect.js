@@ -23,17 +23,24 @@ function filterIngredients(ingredients, searchValue, maxIngredients) {
 function listIngredients(container, ingredients, searchBar) {
     ingredients.forEach((ingredient) => {
         const ingredientButton = createNode("button", { textContent: ingredient.namn });
+
         ingredientButton.addEventListener("click", () => {
             searchBar.value = ingredient.namn;
+            searchBar.dataset.ingredientId = ingredient.nummer;
             container.textContent = "";
         });
+
         container.appendChild(ingredientButton);
     });
 }
 
-document.querySelectorAll(".ingredients-list").forEach((ingredientList) => {
-    const searchBar = ingredientList.querySelector(".ingredients-search");
-    const resultContainer = ingredientList.querySelector(".ingredients-filtered");
+export default function createIngredientSelect() {
+    const searchBar = createNode("input", {
+        className: "ingredients-search",
+        type: "search",
+        placeholder: "Ingredient",
+    });
+    const resultContainer = createNode("div", { className: "ingredients-select dropdown-list" });
 
     searchBar.addEventListener("keyup", () => {
         const searchValue = searchBar.value;
@@ -46,7 +53,12 @@ document.querySelectorAll(".ingredients-list").forEach((ingredientList) => {
             listIngredients(resultContainer, filteredingredients, searchBar);
         }
     });
-});
+
+    return createNode("div", {
+        className: "dropdown ingredients-select",
+        children: [searchBar, resultContainer],
+    });
+}
 
 fetch(livsmedelsverket.listAll)
     .then((res) => res.json())

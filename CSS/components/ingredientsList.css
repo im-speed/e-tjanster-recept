@@ -1,8 +1,25 @@
+.ingredients {
+    padding: 0.5rem;
+}
+
 .ingredients-list {
-    width: 12rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+
+    margin-bottom: 0.5rem;
+}
+
+.ingredients-select {
+    display: inline-block;
+    width: 16rem;
     min-width: 5rem;
 }
 
 .ingredients-search {
-    display: block;
+    width: 100%;
+}
+
+.ingredient-weight {
+    width: 7.5rem;
 }
