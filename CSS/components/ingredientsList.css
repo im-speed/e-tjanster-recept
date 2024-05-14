@@ -6,29 +6,3 @@
 .ingredients-search {
     display: block;
 }
-
-.ingredients-filtered {
-    display: flex;
-    flex-direction: column;
-
-    max-width: 100%;
-    max-height: 50vh;
-    overflow-y: auto;
-
-    background-color: gainsboro;
-
-    & > button {
-        padding: 0.2rem 0.4rem;
-        word-wrap: normal;
-
-        background-color: transparent;
-
-        &:is(:hover, :focus-visible) {
-            background-color: hsl(0 0% 0% / 10%);
-        }
-
-        &:active {
-            background-color: hsl(0 0% 0% / 20%);
-        }
-    }
-}

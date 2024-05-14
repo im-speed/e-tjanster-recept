@@ -3,46 +3,47 @@ import createNode from "../createNode.js";
 
 let ingredients = [];
 
-function filterIngredients(ingredients, searchValue) {
+function filterIngredients(ingredients, searchValue, maxIngredients) {
     const filteredingredients = [];
 
     for (const ingredient of ingredients) {
         if (ingredient.namn.toLowerCase().includes(searchValue.toLowerCase())) {
             filteredingredients.push(ingredient);
+            maxIngredients--;
+        }
+
+        if (maxIngredients < 1) {
+            break;
         }
     }
 
     return filteredingredients;
 }
 
-function listingredients(container, ingredients) {
+function listIngredients(container, ingredients, searchBar) {
     ingredients.forEach((ingredient) => {
-        container.appendChild(
-            createNode("button", { textContent: ingredient.namn })
-        );
+        const ingredientButton = createNode("button", { textContent: ingredient.namn });
+        ingredientButton.addEventListener("click", () => {
+            searchBar.value = ingredient.namn;
+            container.textContent = "";
+        });
+        container.appendChild(ingredientButton);
     });
 }
 
 document.querySelectorAll(".ingredients-list").forEach((ingredientList) => {
     const searchBar = ingredientList.querySelector(".ingredients-search");
-    const resultContainer = ingredientList.querySelector(
-        ".ingredients-filtered"
-    );
+    const resultContainer = ingredientList.querySelector(".ingredients-filtered");
 
     searchBar.addEventListener("keyup", () => {
         const searchValue = searchBar.value;
 
         resultContainer.textContent = "";
 
-        if (searchValue.length > 0 && ingredients) {
-            const filteredingredients = filterIngredients(
-                ingredients,
-                searchValue
-            );
+        if (searchValue.length > 1 && ingredients) {
+            const filteredingredients = filterIngredients(ingredients, searchValue, 200);
 
-            console.log(filteredingredients.length);
-
-            listingredients(resultContainer, filteredingredients);
+            listIngredients(resultContainer, filteredingredients, searchBar);
         }
     });
 });

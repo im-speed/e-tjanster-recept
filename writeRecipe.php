@@ -11,9 +11,9 @@
 <body>
     <script type="module" src="js/components/ingredientsSearch.js"></script>
 
-    <div class="ingredients-list">
+    <div class="dropdown ingredients-list">
         <input class="ingredients-search" type="search">
-        <div class="ingredients-filtered"></div>
+        <div class="dropdown-list ingredients-filtered"></div>
     </div>
 </body>
 
