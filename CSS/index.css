@@ -1,13 +1,13 @@
 @layer reset, base, components, utilities, overrides;
 
 @import url("reset.css") layer(reset);
-/* @import url("/css/base.css") layer(base); */
+@import url("base.css") layer(base);
 @import url("components/index.css") layer(components);
-/* @import url("/css/utilities/index.css") layer(utilities); */
-/* @import url("/css/overrides.css") layer(overrides); */
+/* @import url("utilities/index.css") layer(utilities); */
+/* @import url("overrides.css") layer(overrides); */
 
-#logo{
-    width:40rem;
+#logo {
+    width: 40rem;
     margin: auto;
     margin-top: 4rem;
     margin-bottom: 4rem;
