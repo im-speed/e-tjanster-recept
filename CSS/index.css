@@ -6,6 +6,13 @@
 /* @import url("utilities/index.css") layer(utilities); */
 /* @import url("overrides.css") layer(overrides); */
 
+.montserrat-regular{
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
+}
+
 #logo {
     width: 40rem;
     margin: auto;
