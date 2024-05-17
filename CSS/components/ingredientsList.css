@@ -1,7 +1,3 @@
-.ingredients {
-    padding: 0.5rem;
-}
-
 .ingredients-list {
     display: flex;
     flex-direction: column;

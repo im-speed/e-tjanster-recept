@@ -3,10 +3,10 @@
 @import url("reset.css") layer(reset);
 @import url("base.css") layer(base);
 @import url("components/index.css") layer(components);
-/* @import url("utilities/index.css") layer(utilities); */
+@import url("utilities/index.css") layer(utilities);
 /* @import url("overrides.css") layer(overrides); */
 
-.montserrat-regular{
+.montserrat-regular {
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
     font-weight: normal;
@@ -26,14 +26,14 @@
     background-color: blanchedalmond;
 }
 
-#btn_container{
+#btn_container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     width: 50rem;
 }
 
-.flexCenter  {
+.flexCenter {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -47,7 +47,7 @@ body {
     background-color: rgb(255, 250, 242);
 }
 
-#food_row_container{
+#food_row_container {
     display: flex;
     flex-direction: column;
     gap: 4rem;

@@ -34,9 +34,10 @@ function listIngredients(container, ingredients, searchBar) {
     });
 }
 
-export default function createIngredientSelect() {
+export default function createIngredientSelect(name) {
     const searchBar = createNode("input", {
         className: "ingredients-search",
+        name,
         type: "search",
         placeholder: "Ingredient",
     });

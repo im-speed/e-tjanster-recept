@@ -9,20 +9,25 @@
 </head>
 
 <body>
+    <script type="module" src="js/writeRecipe/index.js"></script>
+    <script type="module" src="js/textareaAuto.js"></script>
+
     <main class="content">
-        <script type="module" src="js/writeRecipe/index.js"></script>
-        <script type="module" src="js/textareaAuto.js"></script>
+        <form action="postRecipe.php" method="post">
+            <h1 class="my-1">Write New Recipe</h1>
+            <h2 class="my-1">Instructions</h2>
+            <textarea id="instructions" class="textarea-auto" name="instructions"></textarea>
 
-        <div>
-            <h2>Instructions</h2>
-            <textarea name="instructions" id="instructions" class="textarea-auto"></textarea>
-        </div>
+            <h2 class="my-1">Ingredients</h2>
+            <div>
+                <div id="ingredients-list" class="ingredients-list"></div>
+                <button id="add-ingredient" class="button" type="button">+ Add ingredient</button>
+            </div>
 
-        <div class="ingredients">
-            <h2>Ingredients</h2>
-            <div id="ingredients-list" class="ingredients-list"></div>
-            <button id="add-ingredient" class="button">+ Add ingredient</button>
-        </div>
+            <div class="my-1">
+                <input class="button" type="submit" value="Post">
+            </div>
+        </form>
     </main>
 </body>
 
