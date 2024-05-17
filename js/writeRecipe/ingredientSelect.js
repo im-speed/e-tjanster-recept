@@ -20,13 +20,13 @@ function filterIngredients(ingredients, searchValue, maxIngredients) {
     return filteredingredients;
 }
 
-function listIngredients(container, ingredients, searchBar) {
+function listIngredients(container, ingredients, searchBar, idInput) {
     ingredients.forEach((ingredient) => {
         const ingredientButton = createNode("button", { textContent: ingredient.namn });
 
         ingredientButton.addEventListener("click", () => {
             searchBar.value = ingredient.namn;
-            searchBar.dataset.ingredientId = ingredient.nummer;
+            idInput.value = ingredient.nummer;
             container.textContent = "";
         });
 
@@ -37,27 +37,32 @@ function listIngredients(container, ingredients, searchBar) {
 export default function createIngredientSelect(name) {
     const searchBar = createNode("input", {
         className: "ingredients-search",
-        name,
         type: "search",
         placeholder: "Ingredient",
     });
     const resultContainer = createNode("div", { className: "ingredients-select dropdown-list" });
+    const hiddenValue = createNode("input", {
+        className: "ingredient-id",
+        type: "hidden",
+        name,
+    });
 
     searchBar.addEventListener("keyup", () => {
         const searchValue = searchBar.value;
 
         resultContainer.textContent = "";
+        hiddenValue.value = null;
 
         if (searchValue.length > 1 && ingredients) {
             const filteredingredients = filterIngredients(ingredients, searchValue, 200);
 
-            listIngredients(resultContainer, filteredingredients, searchBar);
+            listIngredients(resultContainer, filteredingredients, searchBar, hiddenValue);
         }
     });
 
     return createNode("div", {
         className: "dropdown ingredients-select",
-        children: [searchBar, resultContainer],
+        children: [hiddenValue, searchBar, resultContainer],
     });
 }
 

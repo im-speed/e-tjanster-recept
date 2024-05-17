@@ -38,11 +38,11 @@ function removeIngredient(index) {
     ingredients.splice(index, 1);
 
     ingredients.slice(index).forEach((ingredient, indexAdd) => {
-        const select = ingredient.querySelector(".ingredients-search");
+        const id = ingredient.querySelector(".ingredient-id");
         const weight = ingredient.querySelector(".ingredient-weight");
         const removeButton = ingredient.querySelector("button");
 
-        select.name = `ingredient-${index + indexAdd}`;
+        id.name = `ingredient-${index + indexAdd}`;
         weight.name = `ingredient-weight-${index + indexAdd}`;
 
         removeButton.onclick = () => removeIngredient(index + indexAdd);
