@@ -1,3 +1,9 @@
 @import url("button.css");
 @import url("ingredientsList.css");
 @import url("dropdown.css");
+@import url("forms.css");
+
+.content {
+    max-width: 65rem;
+    margin-inline: auto;
+}

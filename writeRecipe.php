@@ -9,12 +9,21 @@
 </head>
 
 <body>
-    <script type="module" src="js/writeRecipe/index.js"></script>
+    <main class="content">
+        <script type="module" src="js/writeRecipe/index.js"></script>
+        <script type="module" src="js/textareaAuto.js"></script>
 
-    <div class="ingredients">
-        <div id="ingredients-list" class="ingredients-list"></div>
-        <button id="add-ingredient" class="button">+ Add ingredient</button>
-    </div>
+        <div>
+            <h2>Instructions</h2>
+            <textarea name="instructions" id="instructions" class="textarea-auto"></textarea>
+        </div>
+
+        <div class="ingredients">
+            <h2>Ingredients</h2>
+            <div id="ingredients-list" class="ingredients-list"></div>
+            <button id="add-ingredient" class="button">+ Add ingredient</button>
+        </div>
+    </main>
 </body>
 
 </html>

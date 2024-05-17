@@ -8,7 +8,12 @@ body {
     box-sizing: inherit;
 }
 
-input {
+input,
+textarea {
     padding: 0.2rem 0.4rem;
     border: solid 1px black;
+}
+
+h2 {
+    font-size: 2.4rem;
 }
