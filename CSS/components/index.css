@@ -4,6 +4,6 @@
 @import url("forms.css");
 
 .content {
-    max-width: 65rem;
-    margin-inline: auto;
+    max-width: 60rem;
+    margin: 2rem auto;
 }

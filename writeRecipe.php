@@ -1,34 +1,35 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Write Recipe</title>
-    <link rel="stylesheet" href="CSS/index.css">
-</head>
+include __DIR__ . "/include/views/_bootstrap.php";
+include __DIR__ . "/include/views/_header.php";
 
-<body>
-    <script type="module" src="js/writeRecipe/index.js"></script>
-    <script type="module" src="js/textareaAuto.js"></script>
+view_head("Gastronomer's Gateway");
 
-    <main class="content">
-        <form action="postRecipe.php" method="post">
-            <h1 class="my-1">Write New Recipe</h1>
-            <h2 class="my-1">Instructions</h2>
-            <textarea id="instructions" class="textarea-auto" name="instructions"></textarea>
+view_header();
 
-            <h2 class="my-1">Ingredients</h2>
-            <div>
-                <div id="ingredients-list" class="ingredients-list"></div>
-                <button id="add-ingredient" class="button" type="button">+ Add ingredient</button>
-            </div>
+?>
 
-            <div class="my-1">
-                <input class="button" type="submit" value="Post">
-            </div>
-        </form>
-    </main>
-</body>
+<script type="module" src="js/writeRecipe/index.js"></script>
+<script type="module" src="js/textareaAuto.js"></script>
 
-</html>
+<main class="content">
+    <form action="postRecipe.php" method="post">
+        <h1 class="my-1">Write New Recipe</h1>
+        <h2 class="my-1">Instructions</h2>
+        <textarea id="instructions" class="textarea-auto" name="instructions"></textarea>
+
+        <h2 class="my-1">Ingredients</h2>
+        <div>
+            <div id="ingredients-list" class="ingredients-list"></div>
+            <button id="add-ingredient" class="button" type="button">+ Add ingredient</button>
+        </div>
+
+        <div class="my-1">
+            <input class="button" type="submit" value="Post">
+        </div>
+    </form>
+</main>
+
+<?php
+
+view_foot();

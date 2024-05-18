@@ -1,5 +1,7 @@
 @layer reset, base, components, utilities, overrides;
 
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
 @import url("reset.css") layer(reset);
 @import url("base.css") layer(base);
 @import url("components/index.css") layer(components);
