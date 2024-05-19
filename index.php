@@ -9,10 +9,9 @@
 </head>
 
 <body>
-    <header class="space-between">
-        <h1>Oliver noodles</h1>
-        <img src="img/logo.png" alt="Title">
-        <div>
+    <header class="space-between" >
+        <img src="img/logo.png" alt="Title" title="Gastronomer's Gateway">
+        <div class="alignRight">
             <button class="button" href="register.php">Register</button>
             <button class="button" href="login.php">Login</button>
         </div>
