@@ -20,6 +20,13 @@
     margin-bottom: 4rem;
 }
 
+.alignRight{
+    align-items: right;
+}
+img{
+    max-width: 92%;
+    height: auto;
+}
 #menu_container {
     padding-top: 2rem;
     padding-bottom: 2rem;
@@ -41,6 +48,7 @@
 
 header {
     background-color: rgb(233, 187, 119);
+    width: 100%;
 }
 
 body {
