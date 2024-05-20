@@ -15,6 +15,8 @@
         <div class="montserrat-regular" id="login_form_container" >
         <h2>Logga in</h2>
             <form id="login_Form" name="logInForm" action="handle-login.php" method="post">
+                <label class="montserrat-regular" for="name">Namn</label><br>
+                <input class="montserrat-regular" type="text" id="password" name="password" required><br>
                 <label class="montserrat-regular" for="email">Email</label><br>
                 <input class="montserrat-regular" type="text" id="email" name="email"required pattern="[^@\s]+@[^@\s]+\.[^@\s]+" title="Emails require an @, followed by atleast 2 characters with a . in between."><br>
                 <label class="montserrat-regular" for="password">Lösenord</label><br>
