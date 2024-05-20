@@ -1,6 +1,6 @@
 <?php
 
-class Ingredient
+class FormIngredient
 {
     public function __construct(public int $id, public float $weight)
     {
@@ -29,7 +29,7 @@ while (isset(
     $weight = $_POST["ingredient-weight-{$next_ingredient}"];
 
     if (is_numeric($id) && is_numeric($weight)) {
-        array_push($ingredients, new Ingredient(intval($id), intval($weight)));
+        array_push($ingredients, new FormIngredient(intval($id), intval($weight)));
     }
 
     $next_ingredient++;
