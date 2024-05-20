@@ -15,7 +15,7 @@
             <label for="email">Email:</label><br>
             <input type="text" id="email" name="email" required placeholder="john@smith.com" pattern="[^@\s]+@[^@\s]+\.[^@\s]+"><br>
             <label for="password">Password:</label><br>
-            <input type="password" id="password" name="password" required placeholder="Password"><br><br>
+            <input type="password" id="password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required placeholder="Password"><br><br>
             <input type="submit" value="register">
         </form>
     </div>
