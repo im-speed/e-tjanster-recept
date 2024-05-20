@@ -1,5 +1,14 @@
 .textarea-auto {
+    --padding-x: 0.5rem;
     box-sizing: content-box;
-    width: 100%;
+    width: calc(100% - 2 * var(--padding-x));
+    padding-inline: var(--padding-x);
     resize: none;
+}
+
+.header-input {
+    display: block;
+    font-size: 1.6rem;
+    width: 100%;
+    margin-bottom: 0.5rem;
 }

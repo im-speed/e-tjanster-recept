@@ -3,9 +3,18 @@
 include __DIR__ . "/include/views/_bootstrap.php";
 include __DIR__ . "/include/views/_header.php";
 
+session_start();
+
 view_head("Gastronomer's Gateway");
 
 view_header();
+
+$user_id = isset($_SESSION["UserID"]) ? $_SESSION["UserID"] : null;
+
+if (!$user_id) {
+    // header("Location: login.php");
+    // exit;
+}
 
 ?>
 
@@ -15,8 +24,8 @@ view_header();
 <main class="content">
     <form action="postRecipe.php" method="post">
         <h1 class="my-1">Write New Recipe</h1>
-        <h2 class="my-1">Instructions</h2>
-        <textarea id="instructions" class="textarea-auto" name="instructions"></textarea>
+        <input class="header-input" type="text" name="title" placeholder="Recipe Name" required>
+        <textarea id="instructions" class="textarea-auto" name="instructions" placeholder="Instructions" required></textarea>
 
         <h2 class="my-1">Ingredients</h2>
         <div>
