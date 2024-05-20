@@ -1,32 +1,59 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="CSS/index.css">
-    <title>Main Page</title>
-</head>
+include __DIR__ . "/include/views/_bootstrap.php";
+include __DIR__ . "/include/views/_header.php";
 
-<body>
-    <header class="space-between" >
-        <img src="img/logo.png" alt="Title" title="Gastronomer's Gateway">
-        <div class="alignRight">
-            <button class="button" href="register.php">Register</button>
-            <button class="button" href="login.php">Login</button>
-        </div>
-    </header> 
+view_head("Gastronomer's Gateway");
 
-    <div class="background" buttonid="menu">
+view_header();
 
-        <button class="button">Start</button>
-        <a class="button" href="/ioajsdioafjfia">Recept</a>
-        <button class="button">Meny</button>
+?>
 
+<div id="food_row_container">
+    <div id="row1" class="food_row">
+        <img src="img/tests/1.jpg" class="food_preview">
+        <img src="img/tests/2.jpg" class="food_preview">
+        <img src="img/tests/3.jpg" class="food_preview">
+        <img src="img/tests/4.jpg" class="food_preview">
+        <img src="img/tests/5.jpg" class="food_preview">
+        <img src="img/tests/6.jpg" class="food_preview">
+        <img src="img/tests/7.jpg" class="food_preview">
+        <img src="img/tests/8.jpg" class="food_preview">
+        <img src="img/tests/9.jpg" class="food_preview">
     </div>
-    <div>
 
+    <div id="row2" class="food_row">
+        <img src="img/tests/5.jpg" class="food_preview">
+        <img src="img/tests/6.jpg" class="food_preview">
+        <img src="img/tests/7.jpg" class="food_preview">
+        <img src="img/tests/8.jpg" class="food_preview">
+        <img src="img/tests/9.jpg" class="food_preview">
+        <img src="img/tests/1.jpg" class="food_preview">
+        <img src="img/tests/2.jpg" class="food_preview">
+        <img src="img/tests/3.jpg" class="food_preview">
+        <img src="img/tests/4.jpg" class="food_preview">
     </div>
-</body>
 
-</html>
+    <div id="row3" class="food_row">
+        <img src="img/tests/8.jpg" class="food_preview">
+        <img src="img/tests/9.jpg" class="food_preview">
+        <img src="img/tests/1.jpg" class="food_preview">
+        <img src="img/tests/2.jpg" class="food_preview">
+        <img src="img/tests/3.jpg" class="food_preview">
+        <img src="img/tests/4.jpg" class="food_preview">
+    </div>
+
+    <div id="row4" class="food_row">
+        <img src="img/tests/1.jpg" class="food_preview">
+        <img src="img/tests/2.jpg" class="food_preview">
+        <img src="img/tests/3.jpg" class="food_preview">
+        <img src="img/tests/4.jpg" class="food_preview">
+        <img src="img/tests/5.jpg" class="food_preview">
+        <img src="img/tests/6.jpg" class="food_preview">
+        <img src="img/tests/7.jpg" class="food_preview">
+        <img src="img/tests/8.jpg" class="food_preview">
+        <img src="img/tests/9.jpg" class="food_preview">
+    </div>
+</div>
+
+<?php view_foot();
