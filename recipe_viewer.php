@@ -9,15 +9,6 @@ view_header();
 
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-
 <div class="center">
     <div id="recipe_holder">
         <img src="img/tests/1.jpg" width="550">
@@ -46,6 +37,6 @@ view_header();
     </div>
 </div>
 
-    
-</body>
-</html>
+<?php
+
+view_foot();
