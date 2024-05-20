@@ -13,7 +13,6 @@ function view_header()
             <menu id="btn_container">
                 <div id="menu">
                     <a class="button montserrat-regular" href="index.php">Start</a>
-                    <a class="button montserrat-regular" href="gaga.php">Recept</a>
                     <a class="button montserrat-regular" href="writeRecipe.php">Skapa Recept</a>
                 </div>
                 <a class="button montserrat-regular" href="login.php">Logga in</a>
