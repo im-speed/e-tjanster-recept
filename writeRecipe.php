@@ -12,8 +12,8 @@ view_header();
 $user_id = isset($_SESSION["UserID"]) ? $_SESSION["UserID"] : null;
 
 if (!$user_id) {
-    // header("Location: login.php");
-    // exit;
+    header("Location: login.php");
+    exit;
 }
 
 ?>
