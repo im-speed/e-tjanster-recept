@@ -79,3 +79,39 @@ body {
     background-color: aquamarine;
     margin: 0 2.2rem;
 }
+
+/* login grejer */
+
+#login_body {
+    background-color: white;
+}
+
+#login_container,
+#login_form_container  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;    
+}
+
+.center {
+    width: 100%;
+    margin: auto;
+}
+
+#login_form_container {
+    border: solid 1px rgb(85, 85, 85);
+    border-radius: 1rem;
+    padding: 2rem;
+    margin-top: 8rem;
+    background-color: rgb(255, 250, 242);;
+}
+
+label[for="password"],
+input[type="text"],
+input[type="password"],
+label[for="email"] {
+    font-size: 22px;
+    margin-bottom: 1.5rem;
+}
