@@ -24,6 +24,8 @@ if (!$user_id) {
 <main class="content">
     <form action="postRecipe.php" method="post">
         <h1 class="my-1">Write New Recipe</h1>
+        <input id="thumbnail" type="file" name="img">
+        <label class="label-below" for="thumbnail">Recipe Thumbnail</label>
         <input class="header-input" type="text" name="title" placeholder="Recipe Name" required>
         <textarea id="instructions" class="textarea-auto" name="instructions" placeholder="Instructions" required></textarea>
 

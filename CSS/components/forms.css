@@ -12,3 +12,8 @@
     width: 100%;
     margin-bottom: 0.5rem;
 }
+
+.label-below {
+    display: block;
+    margin-bottom: 1rem;
+}
