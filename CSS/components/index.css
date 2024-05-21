@@ -2,6 +2,7 @@
 @import url("ingredientsList.css");
 @import url("dropdown.css");
 @import url("forms.css");
+@import url("recipe.css");
 
 .content {
     max-width: 60rem;
