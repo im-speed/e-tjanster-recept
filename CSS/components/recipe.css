@@ -1,3 +1,26 @@
+#recipe_holder {
+    display: flex;
+    flex-direction: row;
+    gap: 7rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+#recipe_info {
+    width: 34rem;
+}
+
+#recipe_instructions {
+    margin-top: 2rem;
+    font-size: 22px;
+    text-wrap: wrap;
+}
+
+#ingredients {
+    margin-top: 2rem;
+    font-size: 20px;
+}
+
 .recipe-ingredient {
     display: flex;
     align-items: center;

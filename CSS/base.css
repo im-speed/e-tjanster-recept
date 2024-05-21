@@ -1,5 +1,11 @@
 body {
     box-sizing: border-box;
+    background-color: rgb(255, 250, 242);
+}
+
+header {
+    background-color: rgb(233, 187, 119);
+    width: 100%;
 }
 
 *,
@@ -20,4 +26,11 @@ h1 {
 
 h2 {
     font-size: 2.4rem;
+}
+
+label,
+input[type="text"],
+input[type="password"] {
+    font-size: 20px;
+    margin-bottom: 1.5rem;
 }
