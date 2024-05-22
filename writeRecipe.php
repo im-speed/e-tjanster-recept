@@ -1,20 +1,15 @@
 <?php
 
-include __DIR__ . "/include/views/_boiler.php";
-include __DIR__ . "/include/views/_header.php";
-
-session_start();
-
-view_head("Gastronomer's Gateway");
-
-view_header();
-
-$user_id = isset($_SESSION["UserID"]) ? $_SESSION["UserID"] : null;
+include __DIR__ . "/include/bootstrap.php";
 
 if (!$user_id) {
     header("Location: login.php");
     exit;
 }
+
+view_head("Gastronomer's Gateway");
+
+view_header($user_id);
 
 ?>
 

@@ -1,7 +1,6 @@
 <?php
 
-include __DIR__ . "/include/views/_boiler.php";
-include __DIR__ . "/include/views/_header.php";
+include __DIR__ . "/include/bootstrap.php";
 
 view_head("Gastronomer's Gateway");
 

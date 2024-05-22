@@ -1,6 +1,6 @@
 <?php
 
-function view_header()
+function view_header(?int $user_id = null)
 {
 ?>
     <header>
@@ -15,7 +15,10 @@ function view_header()
                     <a class="button montserrat-regular" href="index.php">Start</a>
                     <a class="button montserrat-regular" href="writeRecipe.php">Skapa Recept</a>
                 </div>
-                <a class="button montserrat-regular" href="login.php">Logga in</a>
+
+                <?php if (is_null($user_id)) : ?>
+                    <a class="button montserrat-regular" href="login.php">Logga in</a>
+                <?php endif ?>
             </menu>
         </div>
     </header>

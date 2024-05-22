@@ -2,8 +2,7 @@
 
 require_once __DIR__ . "/include/db/models/recipe.php";
 require_once __DIR__ . "/include/db/models/ingredient.php";
-include __DIR__ . "/include/views/_boiler.php";
-include __DIR__ . "/include/views/_header.php";
+include __DIR__ . "/include/bootstrap.php";
 
 $id = isset($_GET["id"]) && is_numeric($_GET["id"]) ? (int) $_GET["id"] : null;
 
@@ -18,7 +17,7 @@ $recipe = Recipe::select($conn, $id);
 
 view_head("Gastronomer's Gateway");
 
-view_header();
+view_header($user_id);
 
 ?>
 
