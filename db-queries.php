@@ -33,3 +33,19 @@ function addNewUser(SQLite3 $conn, string $email, string $hashedPassword)
         return true;
     }
 }
+
+
+function getPassFromEmail($conn, $email){
+    $passQuery = $conn->prepare("SELECT * FROM user WHERE user.Email = :email");
+    $passQuery->bindParam(':email', $email, SQLITE3_TEXT);
+    $result = $passQuery->execute();
+    if(!$result){
+        $conn->close();
+        return "error";
+    }
+    else {
+        $row = $result->fetchArray(SQLITE3_ASSOC);
+        $conn->close();
+        return $row;
+    }
+}
