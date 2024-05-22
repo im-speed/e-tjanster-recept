@@ -17,7 +17,7 @@ view_header($user_id);
 <script type="module" src="js/textareaAuto.js"></script>
 
 <main class="content">
-    <form action="postRecipe.php" method="post">
+    <form action="postRecipe.php" method="post" enctype="multipart/form-data">
         <h1 class="my-1">Write New Recipe</h1>
         <input id="thumbnail" type="file" name="img">
         <label class="label-below" for="thumbnail">Recipe Thumbnail</label>
