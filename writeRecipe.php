@@ -21,8 +21,8 @@ view_header($user_id);
         <h1 class="my-1">Write New Recipe</h1>
         <input id="thumbnail" type="file" name="img">
         <label class="label-below" for="thumbnail">Recipe Thumbnail</label>
-        <input class="header-input" type="text" name="title" placeholder="Recipe Name" required>
-        <textarea id="instructions" class="textarea-auto" name="instructions" placeholder="Instructions" required></textarea>
+        <input class="header-input" type="text" name="title" placeholder="Recipe Name"  minlength="2" maxlength="80" required>
+        <textarea id="instructions" class="textarea-auto" name="instructions" minlength="2" maxlength="1000" placeholder="Instructions" required></textarea>
 
         <h2 class="my-1">Ingredients</h2>
         <div>
