@@ -30,12 +30,12 @@ if (isset($json["meals"]) && $json["meals"]) {
 
     $ingridient_number = 1;
     while (
-        isset($response["strIngredient{$ingridient_number}"])
-        && !empty($response["strIngredient{$ingridient_number}"])
+        isset($recipe["strIngredient{$ingridient_number}"])
+        && !empty($recipe["strIngredient{$ingridient_number}"])
     ) {
         $ingredient = new ApiIngredient(
-            $response["strIngredient{$ingridient_number}"],
-            $response["strMeasure{$ingridient_number}"]
+            $recipe["strIngredient{$ingridient_number}"],
+            $recipe["strMeasure{$ingridient_number}"]
         );
 
         array_push($ingredients, $ingredient);

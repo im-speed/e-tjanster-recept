@@ -14,12 +14,12 @@ function createIngredient(data, weight) {
 }
 
 ingredientList.forEach((ingredient) => {
-    console.log(ingredient);
-
     fetch(livsmedelsverket.byId(ingredient.dataset.number))
         .then((res) => res.json())
         .then((json) => {
-            ingredient.replaceWith(createIngredient(json, ingredient.dataset.weight));
+            ingredient.replaceWith(
+                createIngredient(json, ingredient.dataset.weight)
+            );
         })
         .catch((err) => console.error(err));
 });
