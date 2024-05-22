@@ -16,7 +16,7 @@
         <h2>Logga in</h2>
             <form id="registration_Form" name="registration_form" action="handle-registration.php" method="post">
                 <label class="montserrat-regular" for="name">Namn</label><br>
-                <input class="montserrat-regular" type="text" id="password" name="password" required><br>
+                <input class="montserrat-regular" type="text" id="name" name="name" required><br>
                 <label class="montserrat-regular" for="email">Email</label><br>
                 <input class="montserrat-regular" type="text" id="email" name="email" required pattern="[^@\s]+@[^@\s]+\.[^@\s]+" title="Emails require an @, followed by atleast 2 characters with a . in between."><br>
                 <label class="montserrat-regular" for="password">Lösenord</label><br>

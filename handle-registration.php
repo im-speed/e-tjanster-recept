@@ -28,17 +28,20 @@
                 echo "error";
             }
         }
+
+        if (isset($_POST["name"])) {
+            $name = $_POST["name"];
+        }
+
         else {
             echo "Password field is empty";
         }
     }
-
     else {
             echo "Form not submitted";
-    }
-    
+    }   
 
 include ("establish-db-connection.php");
 include ("db-queries.php");
 
-addNewUser($conn, $email, $hashed_password);
+addNewUser($conn, $name, $email, $hashed_password);
