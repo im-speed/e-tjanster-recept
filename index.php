@@ -4,7 +4,7 @@ include __DIR__ . "/include/bootstrap.php";
 
 view_head("Gastronomer's Gateway");
 
-view_header();
+view_header($user_id);
 
 ?>
 

@@ -17,6 +17,7 @@
     background-color: white;
 
     & > button {
+        width: 100%;
         padding: 0.25rem 0.5rem;
         word-wrap: normal;
 
