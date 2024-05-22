@@ -101,15 +101,16 @@ if (!$stmt->execute()) {
 $recipe_id = $conn->lastInsertRowID();
 
 foreach ($ingredients as $ingredient) {
-    $stmtIng = $conn->prepare("INSERT INTO ingredient (RecipeID, Number, Weight) VALUES (:RecipeID, :Number, :Weight)");
+    $stmtIng = $conn->prepare("INSERT INTO ingredient (RecipeID, Number, Weight, Image) VALUES (:RecipeID, :Number, :Weight, :Image)");
 
     $stmtIng->bindParam(":RecipeID", $recipe_id);
     $stmtIng->bindParam(":Number", $ingredient->id);
     $stmtIng->bindParam(":Weight", $ingredient->weight);
+    $stmtIng->bindParam(":Image", $fileNameNew);
 
     if (!$stmtIng->execute()) {
         exit("Error: " . $conn->lastErrorMsg());
     }
 }
 
-//header("Location: recipe.php?id={$recipe_id}");
+header("Location: recipe.php?id={$recipe_id}");
