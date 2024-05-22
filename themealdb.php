@@ -53,8 +53,6 @@ view_header($user_id);
 <main class="center">
     <?php if ($recipe) : ?>
 
-        <script type="module" src="/js/viewRecipe/index.js"></script>
-
         <div id="recipe_holder">
             <img id="recipe_thumb" src="<?= $recipe["strMealThumb"] ?>">
 
