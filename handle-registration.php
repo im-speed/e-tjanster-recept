@@ -44,4 +44,4 @@
 include ("establish-db-connection.php");
 include ("db-queries.php");
 
-addNewUser($conn, $name, $email, $hashed_password);
+addNewUser($conn, $name, $email, $hashed_password, "regular");

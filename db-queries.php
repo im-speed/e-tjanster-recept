@@ -19,9 +19,9 @@ function matchEmail(SQLite3 $conn, string $newEmail)
     }
 }
 
-function addNewUser($conn, $name, $email, $hashedPassword)
+function addNewUser($conn, $name, $email, $hashedPassword, $role)
 {
-    $stmt = $conn->prepare("INSERT INTO 'user' ('name', 'email', 'password') VALUES (:name, :email, :password)");
+    $stmt = $conn->prepare("INSERT INTO 'user' ('name', 'email', 'password', 'role') VALUES (:name, :email, :password, $role)");
     $stmt->bindParam(':name', $name, SQLITE3_TEXT);
     $stmt->bindParam(':email', $email, SQLITE3_TEXT);
     $stmt->bindParam(':password', $hashedPassword, SQLITE3_TEXT);
