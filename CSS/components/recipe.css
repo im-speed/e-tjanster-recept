@@ -15,11 +15,14 @@
     width: 34rem;
 }
 
+#recipe_title {
+    word-break: break-word;
+}
+
 #recipe_instructions {
     margin-top: 2rem;
     font-size: 22px;
-    text-wrap: wrap;
-    white-space: pre-wrap;
+    word-break: break-word;
 }
 
 #ingredients {
