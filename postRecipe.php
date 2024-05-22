@@ -71,12 +71,12 @@ while (isset(
 }
 
 session_start();
-/*
+
 $user_id = isset($_SESSION["UserID"]) ? $_SESSION["UserID"] : null;
 
 if (!$user_id) {
     exit("Not logged in as user");
-}*/
+}
 
 $conn = new SQLite3("db/gastronomy.db");
 if (!$conn) {
