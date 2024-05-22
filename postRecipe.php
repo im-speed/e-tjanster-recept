@@ -15,7 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] !== "POST") {
     exit("Form not submitted");
 }
 
-if (!isset($_POST["title"], $_POST["instructions"], $_POST["img"])) {
+if (!isset($_POST["title"], $_POST["instructions"])) {
     exit("Some fields are empty");
 }
 
