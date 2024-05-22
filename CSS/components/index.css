@@ -4,6 +4,7 @@
 @import url("home.css");
 @import url("ingredientsList.css");
 @import url("recipe.css");
+@import url("search.css");
 
 .content {
     max-width: 60rem;

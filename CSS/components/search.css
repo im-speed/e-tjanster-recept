@@ -1,0 +1,61 @@
+#search-recipe {
+    width: 32rem;
+    padding: 0.5rem 1rem;
+    font-size: 1.4rem;
+}
+
+.search-results {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    padding: 1rem 0;
+}
+
+.search-result {
+    display: flex;
+    gap: 1rem;
+
+    padding: 1rem;
+    border-radius: 0.5rem;
+
+    background-color: blanchedalmond;
+    box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,
+        rgba(45, 35, 66, 0.3) 0 7px 13px -3px, hsl(0 0 0 / 10%) 0 -3px 0 inset;
+
+    transition: box-shadow 0.15s, transform 0.15s;
+    will-change: box-shadow, transform;
+    touch-action: manipulation;
+
+    &:is(:hover, :focus-visible) {
+        box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px,
+            rgba(45, 35, 66, 0.3) 0 7px 13px -3px,
+            hsl(0 0 0 / 10%) 0 -3px 0 inset;
+        transform: translateY(-2px);
+    }
+
+    &:active {
+        box-shadow: hsl(0 0 0 / 10%) 0 -3px 0 inset;
+        transform: translateY(2px);
+    }
+}
+
+.search-result-thumb {
+    max-height: 4rem;
+}
+
+.search-result-title {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.search-result-instructions {
+    display: -webkit-box;
+    white-space: pre-wrap;
+
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+
+    overflow: hidden;
+}

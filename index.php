@@ -4,9 +4,13 @@ include __DIR__ . "/include/bootstrap.php";
 
 view_head("Gastronomer's Gateway");
 
-view_header();
+view_header($user_id);
 
 ?>
+
+<form class="flexCenter mt-3" action="search.php" method="get">
+    <input id="search-recipe" type="search" name="q" placeholder="Search Recipe">
+</form>
 
 <div id="food_row_container">
     <div id="row1" class="food_row">
