@@ -1,11 +1,11 @@
 <?php
 
 include __DIR__ . "/include/bootstrap.php";
-
+/*
 if (!$user_id) {
     header("Location: login.php");
     exit;
-}
+}*/
 
 view_head("Gastronomer's Gateway");
 
