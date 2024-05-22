@@ -27,7 +27,7 @@ view_header($user_id);
         <script type="module" src="/js/viewRecipe/index.js"></script>
 
         <div id="recipe_holder">
-            <?php echo "<img src='img/uploads/" . $recipe->imgHref . "width='550'>" ?>
+            <?php echo "<img src='img/uploads/" . $recipe->imgHref . "' width='550'>" ?>
             <div id="recipe_info">
                 <h1 id="recipe_title"><?= $recipe->name ?></h1>
                 <p id="recipe_instructions"><?= $recipe->instructions ?></p>
