@@ -18,6 +18,8 @@ function view_header(?int $user_id = null)
 
                 <?php if (is_null($user_id)) : ?>
                     <a class="button montserrat-regular" href="login.php">Logga in</a>
+                <?php else : ?>
+                    <a class="button montserrat-regular" href="logout.php">Logga ut</a>
                 <?php endif ?>
             </menu>
         </div>
