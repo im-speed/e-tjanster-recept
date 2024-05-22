@@ -7,8 +7,8 @@ include __DIR__ . "/include/bootstrap.php";
 $id = isset($_GET["id"]) && is_numeric($_GET["id"]) ? (int) $_GET["id"] : null;
 
 if (!$id) {
-   // header("Location: index.php");
-   // exit;
+    // header("Location: index.php");
+    // exit;
 }
 
 include __DIR__ . "/establish-db-connection.php";
@@ -24,7 +24,7 @@ view_header($user_id);
 <main class="center">
     <?php if ($recipe) : ?>
 
-        <script type="module" src="/js/viewRecipe/index.js"></script>
+        <script type="module" src="js/viewRecipe/index.js"></script>
 
         <div id="recipe_holder">
             <?php echo "<img id='thumbnail' src='img/uploads/" . $recipe->imgHref . "' width='550'>" ?>

@@ -26,7 +26,7 @@ view_header($user_id);
             <?php foreach ($recipes as $recipe) : ?>
 
                 <a class="search-result" href="recipe.php?id=<?= $recipe->id ?>">
-                    <img class="search-result-thumb" src="<?= $recipe->imgHref ?>" alt="Recipe thumbnail">
+                    <img class="search-result-thumb" src="img/uploads/<?= $recipe->imgHref ?>" alt="Recipe thumbnail">
                     <div>
                         <div class="search-result-title"><?= $recipe->name ?></div>
                         <p class="search-result-instructions"><?= $recipe->instructions ?></p>
