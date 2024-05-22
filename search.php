@@ -1,0 +1,49 @@
+<?php
+
+require_once __DIR__ . "/include/db/models/recipe.php";
+include __DIR__ . "/include/bootstrap.php";
+include __DIR__ . "/establish-db-connection.php";
+
+$query = isset($_GET["q"]) ? $_GET["q"] : null;
+
+$recipes = Recipe::search($conn, $query);
+
+view_head($query ? $query : "Search");
+
+view_header($user_id);
+
+?>
+
+<main class="content">
+    <form class="center" action="" method="get">
+        <input id="search-recipe" type="search" name="q" placeholder="Search Recipe">
+    </form>
+
+    <?php if ($recipes) : ?>
+
+        <div class="search-results">
+
+            <?php foreach ($recipes as $recipe) : ?>
+
+                <a class="search-result" href="recipe.php?id=<?= $recipe->id ?>">
+                    <img class="search-result-thumb" src="<?= $recipe->imgHref ?>" alt="Recipe thumbnail">
+                    <div>
+                        <div class="search-result-title"><?= $recipe->name ?></div>
+                        <p class="search-result-instructions"><?= $recipe->instructions ?></p>
+                    </div>
+                </a>
+
+            <?php endforeach ?>
+
+        </div>
+
+    <?php else : ?>
+
+        <p class="flexCenter mt-1">No Recipes Found</p>
+
+    <?php endif ?>
+</main>
+
+<?php
+
+view_foot();
