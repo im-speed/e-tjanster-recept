@@ -1,5 +1,9 @@
 <?php
 
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
 class FormIngredient
 {
     public function __construct(public int $id, public float $weight)
@@ -108,4 +112,4 @@ foreach ($ingredients as $ingredient) {
     }
 }
 
-header("Location: recipe.php?id={$recipe_id}");
+//header("Location: recipe.php?id={$recipe_id}");
