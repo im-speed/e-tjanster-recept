@@ -43,4 +43,23 @@ class Recipe
 
         return $recipe;
     }
+
+    public static function search(SQLite3 $conn, string $query): array
+    {
+        $query = "%{$query}%";
+
+        $stmt = $conn->prepare("SELECT * FROM recipe WHERE Name LIKE :query");
+        $stmt->bindParam(":query", $query);
+        $res = $stmt->execute();
+
+        $recipes = [];
+
+        while ($row = $res->fetchArray()) {
+            if ($row) {
+                array_push($recipes, Recipe::from_row($row));
+            }
+        }
+
+        return $recipes;
+    }
 }
