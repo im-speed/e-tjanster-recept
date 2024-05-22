@@ -19,7 +19,7 @@ class Recipe
         $recipe->id = $row["RecipeID"];
         $recipe->name = $row["Name"];
         $recipe->instructions = $row["Instructions"];
-        $recipe->imgHref = isset($row["imgHref"]) ? $row["imgHref"] : null;
+        $recipe->imgHref = isset($row["Image"]) ? $row["Image"] : null;
 
         return $recipe;
     }
