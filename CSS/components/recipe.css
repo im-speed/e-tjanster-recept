@@ -6,6 +6,11 @@
     margin-bottom: 3rem;
 }
 
+#recipe_thumb {
+    max-width: 32rem;
+    height: fit-content;
+}
+
 #recipe_info {
     width: 34rem;
 }
@@ -14,6 +19,7 @@
     margin-top: 2rem;
     font-size: 22px;
     text-wrap: wrap;
+    white-space: pre-wrap;
 }
 
 #ingredients {
