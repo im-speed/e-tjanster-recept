@@ -92,7 +92,7 @@ $stmt = $conn->prepare("INSERT INTO recipe (PostedBy, Name, Instructions, Image)
 $stmt->bindParam(":PostedBy", $user_id);
 $stmt->bindParam(":Name", $title);
 $stmt->bindParam(":Instructions", $instructions);
-$stmt->bindParam(":Image", $img);
+$stmt->bindParam(":Image", $fileNameNew);
 
 if (!$stmt->execute()) {
     exit("Error: " . $conn->lastErrorMsg());
@@ -101,12 +101,11 @@ if (!$stmt->execute()) {
 $recipe_id = $conn->lastInsertRowID();
 
 foreach ($ingredients as $ingredient) {
-    $stmtIng = $conn->prepare("INSERT INTO ingredient (RecipeID, Number, Weight, Image) VALUES (:RecipeID, :Number, :Weight, :Image)");
+    $stmtIng = $conn->prepare("INSERT INTO ingredient (RecipeID, Number, Weight) VALUES (:RecipeID, :Number, :Weight)");
 
     $stmtIng->bindParam(":RecipeID", $recipe_id);
     $stmtIng->bindParam(":Number", $ingredient->id);
     $stmtIng->bindParam(":Weight", $ingredient->weight);
-    $stmtIng->bindParam(":Image", $fileNameNew);
 
     if (!$stmtIng->execute()) {
         exit("Error: " . $conn->lastErrorMsg());
