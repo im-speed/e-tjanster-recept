@@ -1,6 +1,6 @@
 <?php
 
-include __DIR__ . "/include/views/_bootstrap.php";
+include __DIR__ . "/include/views/_boiler.php";
 include __DIR__ . "/include/views/_header.php";
 
 session_start();

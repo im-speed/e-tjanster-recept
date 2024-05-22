@@ -2,7 +2,7 @@
 
 require_once __DIR__ . "/include/db/models/recipe.php";
 require_once __DIR__ . "/include/db/models/ingredient.php";
-include __DIR__ . "/include/views/_bootstrap.php";
+include __DIR__ . "/include/views/_boiler.php";
 include __DIR__ . "/include/views/_header.php";
 
 $id = isset($_GET["id"]) && is_numeric($_GET["id"]) ? (int) $_GET["id"] : null;
