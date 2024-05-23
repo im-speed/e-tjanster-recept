@@ -46,10 +46,16 @@ function createSearchResults(recipes) {
 }
 
 function setMessage(text) {
-    resultContainer.appendChild(createNode("p", { textContent: text }));
+    resultContainer.appendChild(
+        createNode("p", { textContent: text, className: "flexCenter" })
+    );
 }
 
 fetch(theMealDB.byName(query))
     .then((res) => res.json())
-    .then((json) => createSearchResults(json["meals"]))
+    .then((json) =>
+        json["meals"]
+            ? createSearchResults(json["meals"])
+            : setMessage("No Recipes Found")
+    )
     .catch(() => setMessage("Could not access TheMealDB"));
