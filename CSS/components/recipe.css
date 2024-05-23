@@ -1,5 +1,6 @@
 #recipe_holder {
     display: flex;
+    align-items: start;
     flex-direction: row;
     gap: 7rem;
     margin-top: 3rem;
@@ -28,7 +29,11 @@
 
 #ingredients {
     margin-top: 2rem;
-    font-size: 20px;
+    font-size: 1.2rem;
+}
+
+#nutrition-list {
+    margin-top: 2rem;
 }
 
 .recipe-ingredient {

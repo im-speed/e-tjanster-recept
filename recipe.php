@@ -24,18 +24,23 @@ view_header($user_id);
 <main class="center">
     <?php if ($recipe) : ?>
 
-        <script type="module" src="js/viewRecipe/index.js"></script>
+        <script type="module" src="js/viewRecipe/index.js" defer></script>
 
         <div id="recipe_holder">
             <?php echo "<img id='thumbnail' src='img/uploads/" . $recipe->imgHref . "' width='550'>" ?>
             <div id="recipe_info">
                 <h1 id="recipe_title"><?= $recipe->name ?></h1>
                 <p id="recipe_instructions"><?= $recipe->instructions ?></p>
+
+                <h2 class="mt-3">Ingredients</h2>
                 <ul id="ingredients">
                     <?php foreach ($recipe->ingredients as $ingredient) : ?>
                         <li class="waiting-ingredient" data-number="<?= $ingredient->number ?>" data-weight="<?= $ingredient->weight ?>">Loading ingredient...</li>
                     <?php endforeach ?>
                 </ul>
+
+                <h2 class="mt-3">Total Nutrition Values</h2>
+                <ul id="nutrition-list"></ul>
             </div>
         </div>
 
