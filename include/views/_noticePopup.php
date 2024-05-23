@@ -6,6 +6,7 @@ function view_notice()
     $error = isset($_GET["error"]) ? $_GET["error"] : null;
 
     $message = $notice ? $notice : ($error ? $error : null);
+    $message = htmlspecialchars($message);
 
     if ($message) :
 ?>
