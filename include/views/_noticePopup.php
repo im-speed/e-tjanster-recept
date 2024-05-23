@@ -9,8 +9,6 @@ function view_notice()
 
     if ($message) :
 ?>
-        <script type="module" src="js/noticePopup.js"></script>
-
         <dialog class="notice <?= $error ? "notice-error" : "" ?>" open>
             <span class="notice-text"><?= $error ? "Error: " : "" ?><?= $message ?></span>
             <form method="dialog">
