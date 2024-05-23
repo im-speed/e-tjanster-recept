@@ -44,7 +44,7 @@ if (isset($json["meals"]) && $json["meals"]) {
     }
 }
 
-view_head("Gastronomer's Gateway");
+view_head($recipe["strMeal"]);
 
 view_header($user_id);
 

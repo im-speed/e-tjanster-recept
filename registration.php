@@ -2,7 +2,7 @@
 
 include __DIR__ . "/include/bootstrap.php";
 
-view_head("Login", "registration_body");
+view_head("Register", "registration_body");
 
 ?>
 

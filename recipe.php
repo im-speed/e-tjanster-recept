@@ -7,15 +7,15 @@ include __DIR__ . "/include/bootstrap.php";
 $id = isset($_GET["id"]) && is_numeric($_GET["id"]) ? (int) $_GET["id"] : null;
 
 if (!$id) {
-     header("Location: index.php");
-     exit;
+    header("Location: index.php");
+    exit;
 }
 
 include __DIR__ . "/establish-db-connection.php";
 
 $recipe = Recipe::select($conn, $id);
 
-view_head("Gastronomer's Gateway");
+view_head($recipe->name);
 
 view_header($user_id);
 
