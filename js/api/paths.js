@@ -1,8 +1,7 @@
 const theMealDB = {
     categories: "https://www.themealdb.com/api/json/v1/1/categories.php",
-    byId: (id) => `https://www.themealdb.com/api/json/v1/1/search.php?s=${id}`,
-    byingredient: (ingredient) =>
-        `https://www.themealdb.com/api/json/v1/1/search.php?s=${ingredient}`,
+    byName: (name) =>
+        `https://www.themealdb.com/api/json/v1/1/search.php?s=${name}`,
 };
 
 const livsmedelsverket = {

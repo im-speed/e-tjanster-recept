@@ -55,3 +55,6 @@
     justify-content: center;
 }
 
+.link {
+    text-decoration: underline;
+}

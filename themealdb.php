@@ -16,7 +16,7 @@ if (!$id) {
     exit;
 }
 
-$api_path = "https://www.themealdb.com/api/json/v1/1/search.php?s={$id}";
+$api_path = "https://www.themealdb.com/api/json/v1/1/lookup.php?i={$id}";
 $response = file_get_contents($api_path);
 $json = json_decode($response, true);
 
@@ -58,6 +58,11 @@ view_header($user_id);
 
             <div id="recipe_info">
                 <h1 id="recipe_title"><?= $recipe["strMeal"] ?></h1>
+
+                <?php if ($recipe["strSource"]) : ?>
+                    <a class="link" href="<?= $recipe["strSource"] ?>"><?= $recipe["strSource"] ?></a>
+                <?php endif ?>
+
                 <p id="recipe_instructions"><?= $recipe["strInstructions"] ?></p>
                 <ul id="ingredients">
                     <?php foreach ($ingredients as $ingredient) : ?>

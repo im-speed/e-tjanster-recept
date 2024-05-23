@@ -14,10 +14,14 @@ view_header($user_id);
 
 ?>
 
+<script type="module" src="js/search/index.js"></script>
+
 <main class="content">
     <form class="center" action="" method="get">
         <input id="search-recipe" type="search" name="q" placeholder="Search Recipe">
     </form>
+
+    <h2 class="flexCenter mt-1">Gastronomer's Gateway</h2>
 
     <?php if ($recipes) : ?>
 
@@ -42,6 +46,12 @@ view_header($user_id);
         <p class="flexCenter mt-1">No Recipes Found</p>
 
     <?php endif ?>
+
+    <h2 class="flexCenter mt-1">TheMealDB</h2>
+
+    <div id="api-search-results" class="search-results">
+
+    </div>
 </main>
 
 <?php
