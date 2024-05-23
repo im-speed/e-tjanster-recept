@@ -3,7 +3,7 @@
 include __DIR__ . "/include/bootstrap.php";
 
 if (!$user_id) {
-    header("Location: login.php");
+    header("Location: login.php?notice=You need to be logged in to write a recipe");
     exit;
 }
 

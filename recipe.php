@@ -15,7 +15,7 @@ include __DIR__ . "/establish-db-connection.php";
 
 $recipe = Recipe::select($conn, $id);
 
-view_head($recipe->name);
+view_head($recipe ? $recipe->name : "Recipe Not Found");
 
 view_header($user_id);
 
