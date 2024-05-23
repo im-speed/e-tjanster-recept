@@ -26,8 +26,8 @@ if (!isset($_POST["instructions"])) {
     exit;
 }
 
-$title = $_POST["title"];
-$instructions = $_POST["instructions"];
+$title = htmlspecialchars($_POST["title"]);
+$instructions = htmlspecialchars($_POST["instructions"]);
 
 if ((isset($_FILES["img"])) && ($_FILES["img"]["error"] !== 4)) {
     $file = $_FILES['img'];
