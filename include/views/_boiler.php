@@ -1,6 +1,8 @@
 <?php
 
-function view_head(string $title)
+include __DIR__ . "/_noticePopup.php";
+
+function view_head(string $title, string $bodyClass = "")
 {
 ?>
     <!DOCTYPE html>
@@ -16,13 +18,13 @@ function view_head(string $title)
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     </head>
 
-    <body>
+    <body class="<?= $bodyClass ?>">
     <?php
 }
 
 function view_foot()
 {
-    ?>
+    view_notice() ?>
     </body>
 
     </html>

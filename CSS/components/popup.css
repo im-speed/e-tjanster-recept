@@ -1,0 +1,21 @@
+.notice[open] {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+
+    position: fixed;
+    top: 5%;
+
+    background-color: rgb(255, 250, 242);
+    border: none;
+    box-shadow: 0.2rem 0.2rem 0.2rem hsl(0 0 0 / 50%);
+
+    &.notice-error {
+        color: darkred;
+    }
+}
+
+.notice-text {
+    font-size: 1.2rem;
+}

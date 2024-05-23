@@ -27,34 +27,31 @@ if ((isset($_FILES["img"])) && ($_FILES["img"]["error"] !== 4)) {
     $file = $_FILES['img'];
     $fileName = $_FILES['img']['name'];
     $fileTmpName = $_FILES['img']['tmp_name'];
-    $fileSize= $_FILES['img']['size'];
+    $fileSize = $_FILES['img']['size'];
     $fileError = $_FILES['img']['error'];
     $fileType = $_FILES['img']['type'];
 
     $fileExt = explode('.', $fileName);
     $fileActualExt = strtolower(end($fileExt));
 
-    $allowed = array('jpg', 'jpeg', 'png');   
-    
-    if(in_array($fileActualExt, $allowed)) {
-        if($fileError === 0){
-            if($fileSize < 10000000) {
-                $fileNameNew = uniqid('', true).".". $fileActualExt;
+    $allowed = array('jpg', 'jpeg', 'png');
+
+    if (in_array($fileActualExt, $allowed)) {
+        if ($fileError === 0) {
+            if ($fileSize < 10000000) {
+                $fileNameNew = uniqid('', true) . "." . $fileActualExt;
                 $fileDestination = "img/uploads/" . $fileNameNew;
                 move_uploaded_file($fileTmpName, $fileDestination);
             } else {
-                header("Location: writeRecipe.php?error=Filen är för stor");
+                header("Location: writeRecipe.php?error=File is to large.");
                 exit();
             }
-
-        }
-        else {
-            header("Location: writeRecipe.php?error=Fel");
+        } else {
+            header("Location: writeRecipe.php?error=Could not upload file.");
             exit();
         }
-    }
-    else { 
-        header("Location: writeRecipe.php?error=Otillåten filtyp på bilden. Endast JPG och PNG tillåts.");
+    } else {
+        header("Location: writeRecipe.php?error=Unsupported file type. Only JPG, JPEG, or PNG allowed.");
         exit();
     }
 }
