@@ -7,7 +7,7 @@ const units = {
     kcal: 1,
     kJ: 1,
     "RE/µg": 1,
-    "NE/mg": 1
+    "NE/mg": 1,
 };
 
 function toGram(weight, unit) {
