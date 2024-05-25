@@ -43,3 +43,15 @@ function getPassFromEmail($conn, $email)
         return $row;
     }
 }
+
+function verifyAdmin(SQLite3 $conn, int $user_id): mixed
+{
+    $stmt = $conn->prepare("SELECT role FROM user WHERE UserID = :id");
+    $stmt->bindParam(":id", $user_id);
+
+    if (($result = $stmt->execute()) && $row = $result->fetchArray()) {
+        return $row["Role"] === "admin";
+    } else {
+        return false;
+    }
+}

@@ -4,6 +4,7 @@ require_once __DIR__ . "/ingredient.php";
 
 class Recipe
 {
+    private bool $deleted;
     public int $id;
     public int $postedBy;
     public string $name;
@@ -20,6 +21,7 @@ class Recipe
         $recipe->name = $row["Name"];
         $recipe->instructions = $row["Instructions"];
         $recipe->imgHref = isset($row["Image"]) ? $row["Image"] : null;
+        $recipe->deleted = $row["Deleted"];
 
         return $recipe;
     }
@@ -39,6 +41,11 @@ class Recipe
         }
 
         $recipe = Recipe::from_row($row);
+
+        if ($recipe->deleted) {
+            return null;
+        }
+
         $recipe->ingredients = Ingredient::getRows($conn, $recipe->id);
 
         return $recipe;
@@ -56,7 +63,11 @@ class Recipe
 
         while ($row = $res->fetchArray()) {
             if ($row) {
-                array_push($recipes, Recipe::from_row($row));
+                $recipe = Recipe::from_row($row);
+
+                if (!$recipe->deleted) {
+                    array_push($recipes, $recipe);
+                }
             }
         }
 
