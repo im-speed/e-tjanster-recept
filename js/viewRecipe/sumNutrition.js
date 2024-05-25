@@ -12,19 +12,20 @@ async function getNutrition(ingredientID, weight) {
     }
 
     nutrients = nutrients.map((nutrient) => {
+        const perGrams = nutrient["viktGram"];
         const obj = {
             name: nutrient["namn"],
             value: nutrient["varde"],
             unit: nutrient["enhet"],
         };
 
-        const gramValue =
-            (toGram(nutrient["varde"], nutrient["enhet"]) * weight) /
-            nutrient["viktGram"];
+        const gramValue = (toGram(obj.value, obj.unit) * weight) / perGrams;
 
         if (!isNaN(gramValue)) {
             obj.value = gramValue;
             obj.unit = "g";
+        } else {
+            obj.value = (obj.value * weight) / perGrams;
         }
 
         return obj;

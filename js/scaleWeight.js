@@ -4,8 +4,6 @@ const units = {
     g: 1,
     kg: 1_000,
     t: 1_000_000,
-    kcal: 1,
-    kJ: 1,
 };
 
 function toGram(weight, unit) {
