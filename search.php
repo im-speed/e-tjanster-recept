@@ -2,7 +2,7 @@
 
 require_once __DIR__ . "/include/db/models/recipe.php";
 include __DIR__ . "/include/bootstrap.php";
-include __DIR__ . "/establish-db-connection.php";
+include __DIR__ . '/include/db/functions/establish-db-connection.php';
 
 $query = isset($_GET["q"]) ? $_GET["q"] : null;
 

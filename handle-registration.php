@@ -44,8 +44,8 @@ if (!isset($_POST["name"])) {
 
 $name = $_POST["name"];
 
-include("establish-db-connection.php");
-include("db-queries.php");
+require_once __DIR__ . "/include/db/functions/user.php";
+include __DIR__ . '/include/db/functions/establish-db-connection.php';
 
 if (addNewUser($conn, $name, $email, $hashed_password, "regular")) {
     header("Location: login.php?notice=Account successfully created.");

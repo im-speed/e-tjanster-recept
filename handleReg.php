@@ -55,15 +55,12 @@ if ($matchingEmail) {
             echo "<p class='centerText newspapertext font22'>Ditt konto har skapats</p>";
             echo "<a href='login.php' id='btnToIndex' class='newspapertext zoom paper'>Logga in</a>";
         }
-        $conn->close();
     } else {
         // Emailen är redan registrerad
         echo "<p class='centerText newspapertext font22'>Emailadressen är redan registrerad</p>";
         echo "<a href='registration.php' id='btnToIndex' class='newspapertext zoom paper'>Försök igen?</a>";
-        $conn->close();
     }
 } else {
     //Queryn kunde inte utföras för någon anledning
     echo "Error: " . $conn->lastErrorMsg();
-    $conn->close();
 }

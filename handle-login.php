@@ -23,12 +23,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     exit();
 }
 
-include 'establish-db-connection.php';
-include 'db-queries.php';
+require_once __DIR__ . "/include/db/functions/user.php";
+include __DIR__ . '/include/db/functions/establish-db-connection.php';
 
 if (matchEmail($conn, $email)) {
-    include 'establish-db-connection.php';
-
     $row = getPassFromEmail($conn, $email);
     if (password_verify($password, $row['Password'])) {
         session_start();

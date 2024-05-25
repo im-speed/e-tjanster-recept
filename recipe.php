@@ -11,7 +11,7 @@ if (!$id) {
     exit;
 }
 
-include __DIR__ . "/establish-db-connection.php";
+include __DIR__ . '/include/db/functions/establish-db-connection.php';
 
 $recipe = Recipe::select($conn, $id);
 
