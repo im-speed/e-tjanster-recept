@@ -33,14 +33,16 @@
     gap: 2rem;
 
     overflow-x: scroll;
-    overflow-y: hidden;
-    white-space: nowrap;
+    overflow-y: visible;
 }
 
 .food_preview {
     position: relative;
     width: 15rem;
     height: 15rem;
+
+    transform: scale(90%);
+    transition: transform 100ms;
 
     & > img {
         display: inline-block;
@@ -55,12 +57,16 @@
         left: 0;
         width: 100%;
 
-        padding: 0.25rem;
+        padding: 0.5rem;
 
         color: white;
         background-color: hsl(0 0 0 / 75%);
 
         font-size: 1.2rem;
         text-align: center;
+    }
+
+    &:is(:hover, :focus-visible):not(:active) {
+        transform: scale(95%);
     }
 }

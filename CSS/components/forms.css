@@ -15,7 +15,9 @@
 
 .label-below {
     display: block;
-    margin-bottom: 1rem;
+    margin-top: 0.2rem;
+    margin-bottom: 2rem;
+    font-size: 1rem;
 }
 
 .registration_body {
@@ -37,4 +39,8 @@
     padding: 2rem;
     margin-top: 8rem;
     background-color: rgb(255, 250, 242);
+}
+
+#categories {
+    margin-top: 1rem;
 }

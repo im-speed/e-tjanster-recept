@@ -23,7 +23,8 @@ view_header($user_id);
         <label class="label-below" for="thumbnail">Recipe Thumbnail</label>
         <input class="header-input" type="text" name="title" placeholder="Recipe Name" minlength="2" maxlength="80" required>
         <textarea id="instructions" class="textarea-auto" name="instructions" minlength="2" maxlength="1000" placeholder="Instructions" required></textarea>
-        <select name="categories" id="categories" required>
+
+        <select class="button" name="categories" id="categories" required>
             <option value="" selected disabled>Select a category</option>
             <option value="1">Beef</option>
             <option value="2">Chicken</option>
