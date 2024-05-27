@@ -24,6 +24,25 @@ view_header($user_id);
         <input class="header-input" type="text" name="title" placeholder="Recipe Name" minlength="2" maxlength="80" required>
         <textarea id="instructions" class="textarea-auto" name="instructions" minlength="2" maxlength="1000" placeholder="Instructions" required></textarea>
 
+        <label for="categories">Choose a category:</label>
+        <select name="categories" id="categories" required>
+            <option value="1">Beef</option>
+            <option value="2">Chicken</option>
+            <option value="3">Dessert</option>
+            <option value="4">Lamb</option>
+            <option value="5">Miscellanous</option>
+            <option value="6">Pasta</option>
+            <option value="7">Pork</option>
+            <option value="8">Seafood</option>
+            <option value="9">Side</option>
+            <option value="10">Starter</option>
+            <option value="11">Vegan</option>
+            <option value="12">Vegetarian</option>
+            <option value="13">Breakfast</option>
+            <option value="14">Goat</option>
+        </select>
+
+
         <h2 class="my-1">Ingredients</h2>
         <div>
             <div id="ingredients-list" class="ingredients-list"></div>

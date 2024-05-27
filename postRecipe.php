@@ -26,6 +26,13 @@ if (!isset($_POST["instructions"])) {
     exit;
 }
 
+if (!isset($_POST["categories"])) {
+    header("Location: writeRecipe.php?error=No category chosen");
+    exit;
+}
+
+
+$category = $_POST["categories"];
 $title = htmlspecialchars($_POST["title"]);
 $instructions = htmlspecialchars($_POST["instructions"]);
 
@@ -98,12 +105,13 @@ if (!$conn) {
     die("Connection failed: " . $conn->lastErrorMsg());
 }
 
-$stmt = $conn->prepare("INSERT INTO recipe (PostedBy, Name, Instructions, Image) VALUES (:PostedBy, :Name, :Instructions, :Image)");
+$stmt = $conn->prepare("INSERT INTO recipe (PostedBy, Name, Instructions, Image, Category) VALUES (:PostedBy, :Name, :Instructions, :Image, :Category)");
 
 $stmt->bindParam(":PostedBy", $user_id);
 $stmt->bindParam(":Name", $title);
 $stmt->bindParam(":Instructions", $instructions);
 $stmt->bindParam(":Image", $fileNameNew);
+$stmt->bindParam(":Category", $category);
 
 if (!$stmt->execute()) {
     exit("Error: " . $conn->lastErrorMsg());
