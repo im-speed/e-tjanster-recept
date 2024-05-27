@@ -11,6 +11,7 @@ class Recipe
     public string $instructions;
     public ?string $imgHref;
     public array $ingredients;
+    public int $category;
 
     public static function from_row($row): Recipe
     {
@@ -22,6 +23,7 @@ class Recipe
         $recipe->instructions = $row["Instructions"];
         $recipe->imgHref = isset($row["Image"]) ? $row["Image"] : null;
         $recipe->deleted = $row["Deleted"];
+        $recipe->category = $row["Category"];
 
         return $recipe;
     }
@@ -72,5 +74,10 @@ class Recipe
         }
 
         return $recipes;
+    }
+
+    public function isDeleted(): bool
+    {
+        return $this->deleted;
     }
 }
