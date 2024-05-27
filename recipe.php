@@ -17,7 +17,7 @@ include __DIR__ . '/include/db/functions/establish-db-connection.php';
 
 $recipe = Recipe::select($conn, $id);
 
-$isAdmin = verifyAdmin($conn, $user_id);
+$isAdmin = $user_id && verifyAdmin($conn, $user_id);
 
 if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["remove"]) && $isAdmin) {
     if (mark_deleted_recipe($conn, $recipe->id)) {
