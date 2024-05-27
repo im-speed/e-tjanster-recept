@@ -29,17 +29,18 @@
 }
 
 .food_row {
+    display: flex;
+    gap: 2rem;
+
     overflow-x: scroll;
     overflow-y: hidden;
     white-space: nowrap;
 }
 
 .food_preview {
-    display: block;
     position: relative;
     width: 15rem;
     height: 15rem;
-    margin: 0 2rem;
 
     & > img {
         display: inline-block;

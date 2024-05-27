@@ -50,10 +50,12 @@ function createCategoryRow(category) {
     );
 
     const row = createNode("div", {
-        className: "food_row",
         children: [
             createNode("h2", { textContent: category["strCategory"] }),
-            ...recipes,
+            createNode("div", {
+                className: "food_row",
+                children: recipes,
+            }),
         ],
     });
 
