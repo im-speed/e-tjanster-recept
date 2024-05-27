@@ -35,14 +35,17 @@
 }
 
 .food_preview {
+    display: block;
     position: relative;
+    width: 15rem;
+    height: 15rem;
+    margin: 0 2rem;
 
     & > img {
-        width: 15rem;
-        height: 15rem;
         display: inline-block;
+        width: 100%;
+        height: 100%;
         background-color: aquamarine;
-        margin: 0 2.2rem;
     }
 
     & > div {
