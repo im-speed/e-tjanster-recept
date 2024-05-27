@@ -35,12 +35,15 @@ async function fetchRecipes() {
 function createCategoryRow(category) {
     const recipes = category["recipes"].map((recipe) =>
         createNode("a", {
+            className: "food_preview",
             href: `recipe.php?id=${recipe["id"]}`,
             children: [
                 createNode("img", {
-                    className: "food_preview",
                     src: `img/uploads/${recipe["imgHref"]}`,
                     alt: recipe["name"],
+                }),
+                createNode("div", {
+                    textContent: recipe["name"],
                 }),
             ],
         })
